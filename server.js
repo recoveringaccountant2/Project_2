@@ -18,7 +18,9 @@ require('./config/database');
 // configure Passport
 require('./config/passport');
 
-
+// require our routes
+var indexRoutes = require('./routes/index');
+// var studentsRoutes = require('./routes/students');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
