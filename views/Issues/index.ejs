@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Issue List</h1>
+<table class="table" id="issue-index">
+    <thead>
+        <th scope="col">Issue Submitter</th>
+        <th scope="col">Category</th>
+        <th scope="col">Status</th>
+        <th scope="col">Details</th>
+        <th scope="col">Delete Issue</th>
+    </thead>
+    <tbody>
+        <% issues.forEach(function(issue) {
+            %>
+            <tr>
+                <td><%= issue.userSubmitting %></td>
+                <td><%= issue.category %></td>
+                <td><%= issue.currentStatus %></td>
+                <td><a href="/issues/<%= issue._id %>">Details</a></td>
+                <td>
+                    <form action="/issues/<%= issue._id %>?_method=DELETE" method="POST" id="deleteIssue">
+                        <button type="submit" form="deleteIssue"></button>
+                    </form>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<div id="add-issue">
+    <a href="/issues/new" class="btn">Report New Issue</a>
+</div>
+
+<%- include('../partials/footer.ejs') %>

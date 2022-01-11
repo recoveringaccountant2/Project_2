@@ -20,7 +20,8 @@ require('./config/passport');
 
 // require our routes
 var indexRoutes = require('./routes/index');
-// var studentsRoutes = require('./routes/students');
+var issuesRoutes = require('./routes/issues');
+var commentsRoutes = require('./routes/comments');  
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,17 +43,17 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
-  res.locals.user = req.user; // assinging a property to res.locals, makes that said property (user) availiable in every
+  res.locals.user = req.user; // assigning a property to res.locals, makes that said property (user) available in every
   // single ejs view
   next();
 });
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
-
+app.use('/issues', issuesRoutes);
+app.use('/', commentsRoutes);
 
 // invalid request, send 404 page
 app.use(function(req, res) {
