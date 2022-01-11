@@ -9,12 +9,13 @@ const commentSchema = new Schema({
 
 const issueSchema = new Schema({
     userSubmitting: String,
+    trailName: String,
     category: {type: String, enum: ['Fallen Tree', 'Snow', 'Ice', 'Mudslide', 'High Water', 'Other-Please Describe']},
     issueDescription: String,  // detail view
     photoUrl: String,  // detail view
-    latitude: Number,  // detail view
-    longitude: Number,   // detail view
-    currentStatus: Boolean,
+    latitude: String,  // detail view
+    longitude: String,   // detail view
+    currentStatus: {type: String, enum: ['Active', 'Closed']},
     comments: [commentSchema]  // detail view
 });
 

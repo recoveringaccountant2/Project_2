@@ -1,5 +1,5 @@
 const Issue = require('../models/issue');
-const Comment = require('../models/comment');
+// const Comment = require('../models/comment');
 
 module.exports = {
     index,
@@ -10,40 +10,42 @@ module.exports = {
 };
 
 function index(req, res) {
-    Issue.find({}).sort('status').exec(function(err, issues) {
-        res.render('issues/index', issues);
-    });
+    console.log('controller-->issues index() started');
+
+
+    // Issue.find().sort('status').exec(function(err, issues) {
+
+    Issue.find({}), function(err, issueDocuments){
+        res.render('issues/index', {
+            title: 'Issues',
+            issues: issueDocuments
+        })
+    }
+        // .sort('status').exec(function(err, issues) {
+        // res.render('issues/index', { });
+        // res.render('issues/index', issues);
+    console.log('controller-->issues index() completed');   
 };
+
 
 function newIssue(req, res) {
-
+    console.log('controller-->issues newIssue() started');
     
-    // res.render('issues/new', {  });
+    res.render('issues/new', {  });
+
+    console.log('controller-->issues newIssue() completed');   
 };
-
-
-
-
-// function newFlight(req, res) {
-//     let newIssue = new Issue();
-//     let dt = newIssue.departs;
-//     let destDate = `
-//         ${dt.getFullYear()}-${dt.getMonth() + 1}-${dt.getDate()}T
-//         ${dt.getHours().toString().padStart(2, '0')}:
-//         ${dt.getMinutes().toString().padStart(2, '0')}
-//         `;
-//     res.render('flights/new', {destDate});
-// };
-
-
-
 
 
 
 function create(req, res) {
+    console.log('controller-->issues create() started');
+
     if (req.body.departs === '') delete req.body.departs;
     Issue.create(req.body);
     res.redirect('issues');
+
+    console.log('controller-->issues create() completed');   
 };
 
 // function show(req, res) {
@@ -57,17 +59,22 @@ function create(req, res) {
 
 
 function show(req, res) {
-    res.render('issues/show', {
-      issue: Issue.getOne(req.params.id),
-    //   issueNum: Issue.getAll().findIndex(issue => issue.id === parseInt(req.params.id)) + 1
-    });
+    console.log('controller-->issues show() started');
+
+    res.render('issues/show', {    });
+
+    console.log('controller-->issues show() completed');   
   }
 
 
 
 
 function deleteIssue(req, res) {
+    console.log('controller-->issues deleteIssue() started');
+
     Issue.findByIdAndRemove(req.params.id, function(err, issue) {
         res.redirect('/');
     });
+
+    console.log('controller-->issues deleteIssue() completed');   
 }

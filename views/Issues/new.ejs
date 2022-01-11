@@ -1,12 +1,45 @@
 <%- include('../partials/header.ejs') %>
 
+<h1>New Issue</h1>
 
+<form id="new-issue-form" action="/issues" method="POST">
 
+    <label>User Submitting</label>
+    <input type="text" name="userSubmitting">
 
+    <label>Trail Name</label>
+    <input type="text" name="trailName">
 
+    <label>Category</label>
+    <select name="category">
+        <option value="Fallen Tree">Fallen Tree</option>
+        <option value="Snow">Snow</option>
+        <option value="Ice">Ice</option>
+        <option value="Mudslide">Mudslide</option>
+        <option value="High Water">High Water</option>    
+        <option value="Other-Please Describe">Other-Please Describe</option>
+    </select>
 
+    <label>Description</label>
+    <input type="text" name="issueDescription">
 
+    <label>Photo Link</label>
+    <input type="text" name="photoUrl">
 
+    <label>Latitude</label>
+    <input type="text" name="latitude">
 
+    <label>Longitude</label>
+    <input type="text" name="longitude">
+
+    <label>Current Status</label>
+    <select name="currentStatus">
+        <option value="Active" selected>Active</option>
+        <option value="Closed">Closed</option>
+    </select>
+
+    <input type="submit" value="Add Issue">
+
+</form>
 
 <%- include('../partials/footer.ejs') %>
