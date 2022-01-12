@@ -1,0 +1,44 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Edit Issue</h1>
+
+<form action="/issues/<%= issue.id %>?_method=PUT" method="POST" id="updateIssue" autocomplete="off">
+
+    <label>User Submitting</label>
+    <input type="text" name="userSubmitting" value="<%= issue.userSubmitting %>">
+
+    <label>Trail Name</label>
+    <input type="text" name="trailName" value="<%= issue.trailName %>">
+
+    <label>Category</label>
+    <select name="category" value="<%= issue.category %>">
+        <option value="Fallen Tree">Fallen Tree</option>
+        <option value="Snow">Snow</option>
+        <option value="Ice">Ice</option>
+        <option value="Mudslide">Mudslide</option>
+        <option value="High Water">High Water</option>    
+        <option value="Other-Please Describe">Other-Please Describe</option>
+    </select>
+
+    <label>Description</label>
+    <input type="text" name="issueDescription" value="<%= issue.issueDescription %>">
+
+    <label>Photo Link</label>
+    <input type="text" name="photoUrl" value="<%= issue.photoUrl %>">
+
+    <label>Latitude</label>
+    <input type="text" name="latitude" value="<%= issue.latitude %>">
+
+    <label>Longitude</label>
+    <input type="text" name="longitude" value="<%= issue.longitude %>">
+
+    <label>Current Status</label>
+    <select name="currentStatus" value="<%= issue.currentStatus %>">
+        <option value="Active">Active</option>
+        <option value="Closed">Closed</option>
+    </select>
+
+    <button type="submit" form="updateIssue">Save Issue</button>
+  </form>
+
+<%- include('../partials/footer.ejs') %>

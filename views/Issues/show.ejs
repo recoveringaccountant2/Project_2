@@ -30,6 +30,14 @@
             </div>
         </div>
 
+        <form action="/issues/<%= issue._id %>/edit" id="edit-issue">
+            <button type="submit" form="edit-issue">Edit Issue</button>
+        </form>
+
+        <form action="/issues/<%= issue._id %>?_method=DELETE" method="POST" id="delete-issue">
+            <button type="submit" form="delete-issue">Delete Issue</button>
+        </form>
+
 
     <h2>Comments</h2>
     <table class="table" id="issue-index">

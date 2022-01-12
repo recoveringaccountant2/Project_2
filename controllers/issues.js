@@ -5,7 +5,9 @@ module.exports = {
     new: newIssue,
     create,
     show,
-    delete: deleteIssue
+    delete: deleteIssue,
+    edit,
+    update
 };
 
 function index(req, res) {
@@ -47,4 +49,26 @@ function deleteIssue(req, res) {
         res.redirect('/');
     });
     console.log('controller-->issues deleteIssue() completed');   
-}
+}  
+
+  function edit(req, res) {
+    console.log('controller-->issues edit() started');
+    Issue.findById(req.params.id, function(err, issue) {
+        res.render('issues/edit', {issue});
+        });
+    console.log('controller-->issues edit() completed');   
+};
+  
+function update(req, res) {
+    console.log('controller-->issues update() started');
+
+    Issue.findByIdAndUpdate(req.params.id, req.body);
+    // res.redirect('/issues');
+    Issue.findById(req.params.id, function(err, issue) {
+        res.render('issues/show', {issue});
+        });
+
+    console.log('controller-->issues update() completed');   
+};
+
+

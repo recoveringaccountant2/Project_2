@@ -1,24 +1,14 @@
-var express = require('express');  // include on all routes 
-var router = express.Router();  // include on all routes 
+var express = require('express');  
+var router = express.Router();
 const issuesCtrl = require('../controllers/issues');
 
-
-
-
-
 router.get('/', function(req, res) {res.redirect('issues/index')});
-
-
-
-
-router.get('/index', issuesCtrl.index);  // list of active issues
-router.get('/new', issuesCtrl.new);  // report new issue
-router.get('/:id', issuesCtrl.show);  // show details of existing issue
+router.get('/index', issuesCtrl.index); 
+router.get('/new', issuesCtrl.new); 
+router.get('/:id', issuesCtrl.show);  
 router.post('/', issuesCtrl.create);  
-router.delete('/:id', issuesCtrl.delete);  // delete issue
-
-
-// ! be sure to add a PUT route for updating issues 
-
+router.delete('/:id', issuesCtrl.delete); 
+router.get('/:id/edit', issuesCtrl.edit);
+router.put('/:id', issuesCtrl.update);
 
 module.exports = router;

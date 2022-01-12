@@ -1,13 +1,12 @@
 <%- include('../partials/header.ejs') %>
 
-<h1>ISSUE LIST</h1>
+<h1>TRAIL ISSUES</h1>
 <table class="table" id="issue-index">
     <thead>
         <th scope="col">Trail</th>
         <th scope="col">Category</th>
         <th scope="col">Status</th>
         <th scope="col">Details</th>
-        <th scope="col">Delete Issue</th>
     </thead>
     <tbody>
         <% issues.forEach(function(issue) { %>
@@ -16,11 +15,6 @@
                 <td><%= issue.category %></td>
                 <td><%= issue.currentStatus %></td>
                 <td><a href="/issues/<%= issue._id %>">Details</a></td>
-                <td>
-                    <form action="/issues/<%= issue._id %>?_method=DELETE" method="POST" id="deleteIssue">
-                        <button type="submit" form="deleteIssue">Delete</button>
-                    </form>
-                </td>
             </tr>
         <% }); %>
     </tbody>
@@ -30,14 +24,13 @@
     <a href="/issues/new" class="btn">Report New Issue</a>
 </div>
 
-<iframe
+<!-- <iframe
   width="600"
   height="450"
   style="border:0"
   loading="lazy"
   allowfullscreen
-  src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-    &q=Space+Needle,Seattle+WA">
-</iframe>
+  src="https://www.google.com/maps/embed/v1/place?key=   &q=Space+Needle,Seattle+WA">
+</iframe> -->
 
 <%- include('../partials/footer.ejs') %>
