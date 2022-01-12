@@ -17,15 +17,45 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
 
-        <nav class="navbar">
+        <nav class="navbar navbar-row">
 
-            <a href="" class="navbar-brand left">TrailSha.pe </a>
 
-            <ul class="right">
+
+
+
+
+
+            <ul class="right navbar-column">
+              <li class="nav-item">
+                  <a class="nav-link" href="/issues/index">View All Issues</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/issues/new">Report New Issue </a>
+              </li>
+          </ul>
+          
+
+
+          <div class="logo navbar-column">
+            <div class="name1">Trail</div>
+
+            <a href="/issues/index">
+              <img src="../images/Logo.png" class="navbar-brand left" height="50">
+            </a>
+
+            <div class="name2">Sha.pe</div>
+
+          </div>
+
+
+            <ul class="left navbar-column">
               <li>
                 <% if (user) { %>
                   <a href="/logout">Log Out</a>
@@ -36,18 +66,7 @@
               </li>
             </ul>
 
-            <ul class="center">
-                <li class="nav-item">
-                    <a class="navbar-brand" href="/">TrailSha.pe </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/issues">All Issues</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/issues/new">Report New Issue </a>
-                </li>
-            </ul>
-            
+
         </nav>
 
     </header>

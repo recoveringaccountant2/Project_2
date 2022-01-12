@@ -1,20 +1,118 @@
-.brand-logo {
-  margin-left: 15px;
+
+body {
+  background-color: #e4801b;
+  color: white;
+  font-family: 'Comfortaa', cursive;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+h1, h2 {
+  text-align: center;
+  padding-top: 10px;
+  color: blue;
 }
 
-#search-row form {
+.show-page-title {
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.table {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse:separate; 
+  border-spacing: 25px 15px; 
+}
+
+.table > th {
+  margin-left: 5px;
+}
+
+#add-issue {
   padding-top: 20px;
+  text-align: center;
 }
 
-.student-name {
-  position: relative;
-  top: -5px;
+.column {
+  float: left;
+  width: 45%;
+} 
+
+.issue-photo {
+  text-align: right;
+  padding-right: 5%;
+  margin-top: 8px;
+
 }
 
-.collection-item form {
-  margin-top: -5px;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  border-radius: 15px;
+}
+
+
+
+#add-comment-form {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#add-comment-form > #add-comment-button {
+    margin-top: 10px;
+}
+
+.navbar {
+  grid-area: nav;
+  background-color: #e44d1b;
+  display: flex;
+  justify-content: center;
+  /* align-items: center;*/
+  /* padding: 0 20px 0 30px;  */
+  border-radius: 15px;
+
+}
+
+.navbar-column {
+  width: 33.33%;
+  text-align: center;
+}
+
+.navbar > a {
+  padding-top: 8px;
+  /* width: 34px; */
+  /* object-fit: contain;
+  margin-right: auto; */
+}
+/* 
+.navbar > .name1 {
+  padding-top: 12px;
+}
+
+.navbar > .name2 {
+  padding-top: 40px;
+} */
+
+.navbar > .left {
+  /* position: absolute; */
+  justify-content: left;
+}
+
+.navbar > .right {
+  /* position: absolute; */
+  justify-content: right;
+}
+
+
+
+
+
+footer {
+  margin-top: 75px;
+  text-align: center;
+  color: gray;
 }
