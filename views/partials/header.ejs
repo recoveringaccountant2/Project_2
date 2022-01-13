@@ -36,6 +36,7 @@
               <li class="nav-item">
                   <a class="nav-link" href="/issues/index">View All Issues</a>
               </li>
+              <br>
               <li class="nav-item">
                   <a class="nav-link" href="/issues/new">Report New Issue </a>
               </li>
@@ -43,25 +44,20 @@
           
 
 
-          <div class="logo navbar-column">
-            <div class="name1">Trail</div>
 
-            <a href="/issues/index">
+            <h1 class="logo navbar-column">Trail<a href="/issues/index">
               <img src="../images/Logo.png" class="navbar-brand left" height="50">
-            </a>
+            </a>Sha.pe</h1>
 
-            <div class="name2">Sha.pe</div>
-
-          </div>
 
 
             <ul class="left navbar-column">
               <li>
                 <% if (user) { %>
+                  <span>Hi <%= user.name %> </span><br><br>
                   <a href="/logout">Log Out</a>
-                  <span>Hi <%= user.name %> </span>
                 <% } else { %>
-                  <a href="/auth/google"> Login with Google</a>
+                  <a href="/auth/google"> Login with<br><br>the Google</a>
                 <% } %>       
               </li>
             </ul>

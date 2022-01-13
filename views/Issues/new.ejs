@@ -5,12 +5,15 @@
 <form id="new-issue-form" action="/issues" method="POST">
 
     <label>User Submitting</label>
+    <br>
     <input type="text" name="userSubmitting">
-
+    <br>
     <label>Trail Name</label>
+    <br>
     <input type="text" name="trailName">
-
+    <br>
     <label>Category</label>
+    <br>
     <select name="category">
         <option value="Fallen Tree">Fallen Tree</option>
         <option value="Snow">Snow</option>
@@ -19,27 +22,53 @@
         <option value="High Water">High Water</option>    
         <option value="Other-Please Describe">Other-Please Describe</option>
     </select>
-
+    <br>
     <label>Description</label>
+    <br>
     <input type="text" name="issueDescription">
-
+    <br>
     <label>Photo Link</label>
+    <br>
     <input type="text" name="photoUrl">
-
+    <br>
     <label>Latitude</label>
+    <br>
     <input type="text" name="latitude">
-
+    <br>
     <label>Longitude</label>
+    <br>
     <input type="text" name="longitude">
-
+    <br>
     <label>Current Status</label>
+    <br>
     <select name="currentStatus">
         <option value="Active" selected>Active</option>
         <option value="Closed">Closed</option>
     </select>
-
+    <br>
     <input type="submit" value="Add Issue">
 
 </form>
+
+
+<script>
+    var x = document.getElementById("demo");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+
+
+
+
 
 <%- include('../partials/footer.ejs') %>

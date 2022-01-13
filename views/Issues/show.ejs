@@ -14,7 +14,7 @@
 
                 <div><img src="<%= issue.photoUrl %>" width="400" height="267" overflow="hidden"></div>
             </div>
-            <div class="column">
+            <div class="column details">
                 <div class="show-page-title">Trail Name: </div>
                 <div><%= issue.trailName %></div>
                 <div class="show-page-title">Category: </div>
@@ -28,7 +28,22 @@
                 <div class="show-page-title">Current Status: </div>
                 <div><%= issue.currentStatus %></div>
             </div>
+            <div class="column"></div>
+                <iframe
+                    id="index-map"
+                    width="400"
+                    height="267"
+                    style="border:2"
+                    loading="lazy"
+                    allowfullscreen
+                    frameColor="#e44d1b"
+                    src="https://www.google.com/maps/embed/v1/place?key=<%= process.env.API_KEY %>&q=<%= issue.latitude %>+<%= issue.longitude %>&maptype=satellite&zoom=12">
+                </iframe>
+
+            </div>            
         </div>
+
+
 
         <form action="/issues/<%= issue._id %>/edit" id="edit-issue">
             <button type="submit" form="edit-issue">Edit Issue</button>
@@ -37,6 +52,7 @@
         <form action="/issues/<%= issue._id %>?_method=DELETE" method="POST" id="delete-issue">
             <button type="submit" form="delete-issue">Delete Issue</button>
         </form>
+
 
 
     <h2>Comments</h2>
