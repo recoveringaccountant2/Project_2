@@ -10,18 +10,11 @@ a, a:hover, a:visited, a:active {
  }
 
 body {
-
-
   background: linear-gradient(to top, #196292 0%, white 100%, #196292 0%);
-  
-
-
-
   background-size: cover;
   height: 100%;
   color: black;
   font-family: 'Comfortaa', cursive;
-  /* text-shadow: 1px 1px 0px black; */
 }
 
 h1 {
@@ -32,8 +25,6 @@ h1 {
   margin-bottom: 10px;
   text-shadow: 2px 2px 0px #196292;
 }
-
-
 
 h2 {
   text-align: center;
@@ -46,9 +37,6 @@ h2 {
 ul {
   list-style-type: none;
 }
-
-
-
 
 #new-issue-form > input, #new-issue-form > label, #new-issue-form > select, #new-issue-form > input {
   margin-bottom: 15px;
@@ -74,11 +62,6 @@ ul {
   text-decoration: underline;
 }
 
-.details {
-  /* padding-left: 20px;
-  padding-right: 20px; */
-}
-
 .table {
   text-align: center;
   margin-left: auto;
@@ -100,12 +83,9 @@ ul {
   float: left;
   width: 33.33%;
   text-align: center;
-
 } 
 
 .issue-photo {
-  /* text-align: right; */
-  /* padding-right: 5%; */
   margin-top: 8px;
   padding-left: 0;
   padding-right:0;
@@ -134,8 +114,6 @@ img, iframe {
   margin-top: 10px;
 }
 
-
-
 #add-comment-form {
   text-align: center;
   padding-bottom: 10px;
@@ -150,8 +128,6 @@ img, iframe {
   background-color: #e44d1b;
   display: flex;
   justify-content: center;
-  /* align-items: center;*/
-  /* padding: 0 20px 0 30px;  */
   border-radius: 15px;
 }
 
@@ -160,7 +136,6 @@ img, iframe {
 }
 
 .left, .right {
-
   padding-inline-start: 0px;
   padding-inline-end: 0px;
 }
@@ -170,42 +145,9 @@ img, iframe {
   text-align: center;
 }
 
-/* .right {
-  text-align: right;
-} */
-
 .navbar-brand {
   transform: scaleX(-1);
 }
-
-.navbar > a {
-  /* padding-top: 15px; */
-  /* width: 34px; */
-  /* object-fit: contain;
-  margin-right: auto; */
-}
-/* 
-.navbar > .name1 {
-  padding-top: 12px;
-}
-
-.navbar > .name2 {
-  padding-top: 40px;
-} */
-
-.navbar > .left {
-  /* position: absolute; */
-  /* justify-content: left; */
-}
-
-.navbar > .right {
-  /* position: absolute; */
-  /* justify-content: right; */
-}
-
-
-
-
 
 footer {
   margin-top: 75px;

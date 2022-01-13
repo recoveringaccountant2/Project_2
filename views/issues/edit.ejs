@@ -1,9 +1,7 @@
 <%- include('../partials/header.ejs') %>
 
 <h2>EDIT ISSUE</h2>
-
 <form action="/issues/<%= issue.id %>?_method=PUT" method="POST" id="updateIssue" class="edit-user-form" autocomplete="off">
-
     <label>User Submitting</label>
     <br>
     <input type="text" name="userSubmitting" value="<%= issue.userSubmitting %>">

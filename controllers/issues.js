@@ -67,4 +67,3 @@ function update(req, res) {
         console.log('controller-->issues update() completed');   
     });
 };
-

@@ -1,62 +1,44 @@
 <%- include('../partials/header.ejs') %>
 
-
-
-
-
 <section id="show-page">
-
     <h2>ISSUE DETAILS</h2>
-
     <div class="row">
-
-            <div class="column issue-photo">
-                <img src="<%= issue.photoUrl %>" width="400" height="267" overflow="hidden">
-            </div>
-
-            <div class="column details">
-                <div class="show-page-title">Trail Name: </div>
-                <div><%= issue.trailName %></div>
-                <div class="show-page-title">Category: </div>
-                <div><%= issue.category %></div>
-                <div class="show-page-title">Description: </div>
-                <div><%= issue.issueDescription %></div>
-                <div class="show-page-title">Latitude: </div>
-                <div><%= issue.latitude %></div>
-                <div class="show-page-title">Longitude: </div>
-                <div><%= issue.longitude %></div>
-                <div class="show-page-title">Current Status: </div>
-                <div><%= issue.currentStatus %></div>
-            </div>
-
-            <div class="column map">
-                
-                <iframe
-                    id="index-map"
-                    width="400"
-                    height="267"
-                    style="border:2"
-                    loading="lazy"
-                    allowfullscreen
-                    frameColor="#e44d1b"
-                    src="https://www.google.com/maps/embed/v1/place?key=<%= process.env.API_KEY %>&q=<%= issue.latitude %>+<%= issue.longitude %>&maptype=satellite&zoom=12">
-                </iframe>
-            </div>    
-
+        <div class="column issue-photo">
+            <img src="<%= issue?.photoUrl %>" width="400" height="267" overflow="hidden">
+        </div>
+        <div class="column details">
+            <div class="show-page-title">Trail Name: </div>
+            <div><%= issue?.trailName %></div>
+            <div class="show-page-title">Category: </div>
+            <div><%= issue?.category %></div>
+            <div class="show-page-title">Description: </div>
+            <div><%= issue?.issueDescription %></div>
+            <div class="show-page-title">Latitude: </div>
+            <div><%= issue?.latitude %></div>
+            <div class="show-page-title">Longitude: </div>
+            <div><%= issue?.longitude %></div>
+            <div class="show-page-title">Current Status: </div>
+            <div><%= issue?.currentStatus %></div>
+        </div>
+        <div class="column map">
+            <iframe
+                id="index-map"
+                width="400"
+                height="267"
+                style="border:2"
+                loading="lazy"
+                allowfullscreen
+                frameColor="#e44d1b"
+                src="https://www.google.com/maps/embed/v1/place?key=<%= process.env.API_KEY %>&q=<%= issue?.latitude %>+<%= issue?.longitude %>&maptype=satellite&zoom=12">
+            </iframe>
+        </div>    
     </div>
-
-
-
-        <form action="/issues/<%= issue._id %>/edit" id="edit-issue">
+        <form action="/issues/<%= issue?._id %>/edit" id="edit-issue">
             <button type="submit" form="edit-issue">Edit Issue</button>
         </form>
-
-        <form action="/issues/<%= issue._id %>?_method=DELETE" method="POST" id="delete-issue">
+        <form action="/issues/<%= issue?._id %>?_method=DELETE" method="POST" id="delete-issue">
             <button type="submit" form="delete-issue">Delete Issue</button>
         </form>
-
-
-
     <h2><br><br>COMMENTS</h2>
     <table class="table" id="issue-index">
         <thead>
@@ -67,14 +49,14 @@
             <th scope="col">Delete</th> -->
         </thead>
         <tbody>
-            <% issue.comments.forEach(function(comment) { %>
+            <% issue?.comments.forEach(function(comment) { %>
                 <tr>
                     <td><%= comment.userSubmitting %></td>
                     <td><%= comment.commentDescription %></td>
                     <td><img src="<%= comment.photoUrl %>" width="200" height="133" overflow="hidden"></td>
-                    <!-- <td><a href="/issues/<%= issue._id %>">Details</a></td>
+                    <!-- <td><a href="/issues/<%= issue?._id %>">Details</a></td>
                     <td>
-                        <form action="/issues/<%= issue._id %>?_method=DELETE" method="POST" id="deleteIssue">
+                        <form action="/issues/<%= issue?._id %>?_method=DELETE" method="POST" id="deleteIssue">
                             <button type="submit" form="deleteIssue"></button>
                         </form>
                     </td> -->
@@ -82,41 +64,19 @@
             <% }); %>
         </tbody>
     </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <br><br>
     <h2>ADD NEW COMMENT</h2>
-    <form id="add-comment-form" method="POST" action="/issues/<%= issue._id %>/comments">
+    <form id="add-comment-form" method="POST" action="/issues/<%= issue?._id %>/comments">
         <div>
             <label>User Submitting: </label>
             <input type="text" name="userSubmitting">
-
             <label>Comment: </label>
             <input type="text" name="commentDescription">
-
             <label>Photo URL: </label>
             <input type="text" name="photoUrl">
         </div>
-
         <input id="add-comment-button" type="submit" value="Add Comment">
-
     </form>
-  
 </section>
-
 
 <%- include('../partials/footer.ejs') %>

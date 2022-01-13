@@ -1,61 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TrailSpa.pe</title>
-    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico"/>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TrailSpa.pe</title>
+  <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico"/>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-
-        <nav class="navbar navbar-row">
-
-
-
-
-
-          <div class="navbar-column">
-
-              <ul class="left">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/issues/index">View All Issues</a>
-                </li>
-                <br>
-                <li class="nav-item">
-                    <a class="nav-link" href="/issues/new">Report New Issue </a>
-                </li>
-            </ul>
-          </div>
-
-
-          <div class="navbar-column">          
-              <h1 class="logo">Trail<a href="/issues/index">
-                <img src="../images/logo.png" class="navbar-brand left" height="50">
-              </a><br>Sha.pe</h1>
-          </div>
-
-          <div class="navbar-column">
-              <ul class="right">
-
-                <li>
-                  <% if (user) { %>
-                    <span>Hi <%= user.name %> </span><br><br>
-                    <a href="/logout">Log Out</a>
-                  <% } else { %>
-                    <a href="/auth/google"> Login with<br><br>the Google</a>
-                  <% } %>       
-                </li>
-              </ul>
-          </div>
-
-        </nav>
-
-    </header>
-    <main>
+  <header>
+    <nav class="navbar navbar-row">
+      <div class="navbar-column">
+        <ul class="left">
+          <li class="nav-item">
+            <a class="nav-link" href="/issues/index">View All Issues</a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="/issues/new">Report New Issue </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-column">          
+        <h1 class="logo">Trail<a href="/issues/index">
+          <img src="/images/logo.png" class="navbar-brand left" height="50">
+        </a><br>Sha.pe</h1>
+      </div>
+      <div class="navbar-column">
+        <ul class="right">
+          <li>
+            <% if (user) { %>
+              <span>Hi <%= user.name %> </span><br><br>
+              <a href="/logout">Log Out</a>
+            <% } else { %>
+              <a href="/auth/google"> Login with<br><br>the Google</a>
+            <% } %>       
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<main>

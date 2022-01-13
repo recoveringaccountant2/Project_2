@@ -11,12 +11,12 @@ const issueSchema = new Schema({
     userSubmitting: String,
     trailName: String,
     category: {type: String, enum: ['Fallen Tree', 'Snow', 'Ice', 'Mudslide', 'High Water', 'Other-Please Describe']},
-    issueDescription: String,  // detail view
-    photoUrl: String,  // detail view
-    latitude: String,  // detail view
-    longitude: String,   // detail view
+    issueDescription: String,  
+    photoUrl: String,  
+    latitude: String,  
+    longitude: String,  
     currentStatus: {type: String, enum: ['Active', 'Closed']},
-    comments: [commentSchema]  // detail view
+    comments: [commentSchema]  
 });
 
 module.exports = mongoose.model('Issue', issueSchema); 
