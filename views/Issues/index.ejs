@@ -3,48 +3,31 @@
 <h2>TRAIL ISSUES</h2>
 <table class="table" id="issue-index">
     <thead>
-        <th scope="col">Trail</th>
         <th scope="col">Category</th>
+        <th scope="col">Trail</th>
         <th scope="col">Status</th>
         <th scope="col">Details</th>
+   
     </thead>
     <tbody>
         <% issues.forEach(function(issue) { %>
             <tr>
+                <% if (issue.category === "Fallen Tree") { %>
+                    <td><img src="/images/log.png" height="50" width="50" border-radius="50%"></td>
+                    <% } else if (issue.category === "Snow") { %>
+                    <td><img src="/images/snow.png" height="50" width="50" border-radius="50%"></td>
+                    <% } else if (issue.category === "Ice") { %>
+                    <td><img src="/images/ice.jpg" height="50" width="50" border-radius="50%"></td>
+                    <% } else if (issue.category === "Mudslide") { %>
+                    <td><img src="/images/mud.jpg" height="50" width="50" border-radius="50%"></td>
+                    <% } else if (issue.category === "High Water") { %>
+                    <td><img src="/images/flood.png" height="50" width="50" border-radius="50%"></td>
+                    <% } else { %>
+                    <td><img src="/images/other.png" height="50" width="50" border-radius="50%"></td>
+                    <% } %>
                 <td><%= issue.trailName %></td>
-                <td><%= issue.category %>
-                
-                
-
-
-
-
-
-
-
-<!--                     
-                    <option value="Fallen Tree">Fallen Tree</option>
-                    <option value="Snow">Snow</option>
-                    <option value="Ice">Ice</option>
-                    <option value="Mudslide">Mudslide</option>
-                    <option value="High Water">High Water</option>    
-                    <option value="Other-Please Describe">Other-Please Describe</option>
-                 -->
-                
-                
-                
-                
-                
-                
-                
-                </td>
                 <td><%= issue.currentStatus %></td>
                 <td><a href="/issues/<%= issue._id %>"><button>Details</button></a></td>
-
-                    
-
-
-
             </tr>
         <% }); %>
     </tbody>

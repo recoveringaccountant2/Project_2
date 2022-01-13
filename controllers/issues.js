@@ -68,35 +68,3 @@ function update(req, res) {
     });
 };
 
-// function update(id, skill) {
-//     const idx = skills.findIndex(skill => skill.id === parseInt(id));
-//     skill.id = parseInt(id);
-//     skills.splice(idx, 1, skill);
-//   }
-// function update(req, res) {
-//     req.body.done = req.body.done === 'on';
-//     Skill.update(req.params.id, req.body);
-//     res.redirect('/skills');
-//   }
-  
-
-
-
-  
-// function update(req, res) {
-//     console.log('controller-->issues update() started');
-
-//     // Issue.findByIdAndUpdate(req.params.id, req.body);
-//     console.log(req.body, " <-- req.body");
-//     console.log(req.params, " <-- req.params");
-//     // res.redirect('/issues');
-//     Issue.findOneAndUpdate(req.params.id, req.body, function(err, issue) {
-//         issue.save()
-//         console.log(issue, "this is my issue thing")  // !!  this is pulling the wrong item
-//         console.log(req.body, "this is my req.body");
-//         // issue.save();
-//         res.render('issues/show', {issue});
-//         });
-
-//     console.log('controller-->issues update() completed');   
-// };

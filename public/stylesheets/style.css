@@ -1,6 +1,6 @@
 header {
   color: white;
-  text-shadow: 1px 1px 0px blue;
+  text-shadow: 1px 1px 0px #196292;
   font-size: 27px;
 }
 
@@ -10,10 +10,13 @@ a, a:hover, a:visited, a:active {
  }
 
 body {
-  background-color: white;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+
+
+  background: linear-gradient(to top, #196292 0%, white 100%, #196292 0%);
+  
+
+
+
   background-size: cover;
   height: 100%;
   color: black;
@@ -27,7 +30,7 @@ h1 {
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 0px blue;
+  text-shadow: 2px 2px 0px #196292;
 }
 
 
@@ -35,7 +38,8 @@ h1 {
 h2 {
   text-align: center;
   padding-top: 10px;
-  color: blue;
+  color: #196292;
+  font-size: 35px;
   text-shadow: 1px 1px 0px white;
 }
 
@@ -119,8 +123,10 @@ img, iframe {
   border-color: #e44d1b;
 }
  
-iframe {
+.map {
   margin-top: 8px;
+  display: inline;
+  text-align: center;
 }
 
 #edit-issue, #delete-issue {
