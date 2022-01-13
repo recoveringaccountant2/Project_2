@@ -5,18 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TrailSpa.pe</title>
-    <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap" rel="stylesheet"> -->
+    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico"/>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <!-- <script src="https://kit.fontawesome.com/7046b37ec7.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
@@ -30,38 +20,40 @@
 
 
 
+          <div class="navbar-column">
 
+              <ul class="left">
 
-            <ul class="right navbar-column">
-              <li class="nav-item">
-                  <a class="nav-link" href="/issues/index">View All Issues</a>
-              </li>
-              <br>
-              <li class="nav-item">
-                  <a class="nav-link" href="/issues/new">Report New Issue </a>
-              </li>
-          </ul>
-          
-
-
-
-            <h1 class="logo navbar-column">Trail<a href="/issues/index">
-              <img src="../images/Logo.png" class="navbar-brand left" height="50">
-            </a>Sha.pe</h1>
-
-
-
-            <ul class="left navbar-column">
-              <li>
-                <% if (user) { %>
-                  <span>Hi <%= user.name %> </span><br><br>
-                  <a href="/logout">Log Out</a>
-                <% } else { %>
-                  <a href="/auth/google"> Login with<br><br>the Google</a>
-                <% } %>       
-              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/issues/index">View All Issues</a>
+                </li>
+                <br>
+                <li class="nav-item">
+                    <a class="nav-link" href="/issues/new">Report New Issue </a>
+                </li>
             </ul>
+          </div>
 
+
+          <div class="navbar-column">          
+              <h1 class="logo">Trail<a href="/issues/index">
+                <img src="../images/Logo.png" class="navbar-brand left" height="50">
+              </a><br>Sha.pe</h1>
+          </div>
+
+          <div class="navbar-column">
+              <ul class="right">
+
+                <li>
+                  <% if (user) { %>
+                    <span>Hi <%= user.name %> </span><br><br>
+                    <a href="/logout">Log Out</a>
+                  <% } else { %>
+                    <a href="/auth/google"> Login with<br><br>the Google</a>
+                  <% } %>       
+                </li>
+              </ul>
+          </div>
 
         </nav>
 

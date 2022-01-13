@@ -12,18 +12,51 @@
         <% issues.forEach(function(issue) { %>
             <tr>
                 <td><%= issue.trailName %></td>
-                <td><%= issue.category %></td>
+                <td><%= issue.category %>
+                
+                
+
+
+
+
+
+
+
+<!--                     
+                    <option value="Fallen Tree">Fallen Tree</option>
+                    <option value="Snow">Snow</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Mudslide">Mudslide</option>
+                    <option value="High Water">High Water</option>    
+                    <option value="Other-Please Describe">Other-Please Describe</option>
+                 -->
+                
+                
+                
+                
+                
+                
+                
+                </td>
                 <td><%= issue.currentStatus %></td>
-                <td><a href="/issues/<%= issue._id %>">Details</a></td>
+                <td><a href="/issues/<%= issue._id %>"><button>Details</button></a></td>
+
+                    
+
+
+
             </tr>
         <% }); %>
     </tbody>
 </table>
 
 <div id="add-issue">
-    <a href="/issues/new" class="btn">Report New Issue</a>
+    <a href="/issues/new" class="btn"><button>Report New Issue</button></a>
 </div>
 
 
 
 <%- include('../partials/footer.ejs') %>
+
+
+

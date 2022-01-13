@@ -6,14 +6,14 @@
 
 <section id="show-page">
 
-    <h2>Issue Detail</h2>
+    <h2>ISSUE DETAILS</h2>
 
     <div class="row">
 
             <div class="column issue-photo">
-
-                <div><img src="<%= issue.photoUrl %>" width="400" height="267" overflow="hidden"></div>
+                <img src="<%= issue.photoUrl %>" width="400" height="267" overflow="hidden">
             </div>
+
             <div class="column details">
                 <div class="show-page-title">Trail Name: </div>
                 <div><%= issue.trailName %></div>
@@ -28,6 +28,7 @@
                 <div class="show-page-title">Current Status: </div>
                 <div><%= issue.currentStatus %></div>
             </div>
+
             <div class="column"></div>
                 <iframe
                     id="index-map"
@@ -39,9 +40,9 @@
                     frameColor="#e44d1b"
                     src="https://www.google.com/maps/embed/v1/place?key=<%= process.env.API_KEY %>&q=<%= issue.latitude %>+<%= issue.longitude %>&maptype=satellite&zoom=12">
                 </iframe>
+            </div>    
 
-            </div>            
-        </div>
+    </div>
 
 
 
@@ -55,7 +56,7 @@
 
 
 
-    <h2>Comments</h2>
+    <h2><br><br>COMMENTS</h2>
     <table class="table" id="issue-index">
         <thead>
             <th scope="col">Comment Submitter</th>
@@ -97,7 +98,7 @@
 
 
     <br><br>
-    <h2>Add New Comment</h2>
+    <h2>ADD NEW COMMENT</h2>
     <form id="add-comment-form" method="POST" action="/issues/<%= issue._id %>/comments">
         <div>
             <label>User Submitting: </label>

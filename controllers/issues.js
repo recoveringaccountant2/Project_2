@@ -39,8 +39,8 @@ function show(req, res) {
     console.log('controller-->issues show() started');
     Issue.findById(req.params.id, function(err, issue) {
         res.render('issues/show', {issue});
+        console.log('controller-->issues show() completed');   
         });
-    console.log('controller-->issues show() completed');   
 };
 
 function deleteIssue(req, res) {
