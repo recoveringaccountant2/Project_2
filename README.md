@@ -79,4 +79,31 @@ Go here:  https://trailshape.herokuapp.com/issues/index
 <img width="469" alt="TrailShape 9 Updated Issue on Summary" src="https://user-images.githubusercontent.com/95941250/149542872-dc00ab7f-88af-4267-92d0-e1d303bec5d0.png">
 
 
+## Future Improvements / Ice Box
 
+There is SO much more I would like to do with this, including but not limited to:
+
+-Query functionality.  "Show me all fallen trees within 20-mile radius."
+-Maps: Have all issues show as points on the same map on the landing page.  
+-Maps: Have map points represented by conditions icons.   
+-User permissions and privacy options.  
+-User profiles: Home location so issues could be sorted nearest first. 
+-User profiles: Add user types for more specific UX (runner, hiker, hunter, volunteer...). 
+-Photos: Upload actual files (i.e. not just the URL).
+-Photos: Ability to upload and display multiple files.  
+-Consider getting feature feedback from Ouray Trail Group or nearby public land managers.
+-Add points of interest.
+-Ability to log and report hours for trail work.  
+-Latitude/Longitude:  Request the browser's location and auto-populate that information (who wants to manually enter latitude and longitude??). 
+-Integrated GPS tracker.  
+-Push notifications (*ding* "Chris Marcinek just cleared the fallen trees you reported on Hayden Trail!")
+-Information could be presented in a news feed.  ("Charles reported a mudslide at Ironton."  "Vale reported Richmond is now passable with microspikes.")
+-Additional authentication methods.  
+
+## Known Bugs
+
+When editing an issue, the dropdown options (condition and status fields) are defaulting to the first options (Fallen Tree and Active, respectively).  These must be changed before saving the edit.  
+
+## Thank You
+
+Shoutouts to my GA instructors James Haff and Arthur D'Amato.  You guys kick ass.  Additional thanks to everyone who inspired or somehow supported taking the leap into a new career field, including but not limited to:  Margaret, Mom, Dad, Tracy, Aaron, Beat, Tim, Geoff, Nathan, Travis, Emma, Eddie, Daniel, Hudnall, and the many many others.  
