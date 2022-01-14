@@ -87,21 +87,21 @@ Go here:  https://trailshape.herokuapp.com/issues/index
 
 There is SO much more I would like to do with this, including but not limited to:
 
--Query functionality.  "Show me all fallen trees within 20-mile radius."
--Maps: Have all issues show as points on the same map on the landing page.  
--Maps: Have map points represented by conditions icons.   
--User permissions and privacy options.  
--User profiles: Home location so issues could be sorted nearest first. 
--User profiles: Add user types for more specific UX (runner, hiker, hunter, volunteer...). 
--Photos: Upload actual files (i.e. not just the URL).
--Photos: Ability to upload and display multiple files.  
--Consider getting feature feedback from Ouray Trail Group or nearby public land managers.
--Add points of interest.
--Ability to log and report hours for trail work.  
--Latitude/Longitude:  Request the browser's location and auto-populate that information (who wants to manually enter latitude and longitude??). 
--Integrated GPS tracker.  
--Push notifications (*ding* "Chris Marcinek just cleared the fallen trees you reported on Hayden Trail!")
--Information could be presented in a news feed.  ("Charles reported a mudslide at Ironton."  "Vale reported Richmond is now passable with microspikes.")
+-Query functionality.  "Show me all fallen trees within 20-mile radius."<br>
+-Maps: Have all issues show as points on the same map on the landing page.  <br>
+-Maps: Have map points represented by conditions icons.   <br>
+-User permissions and privacy options.  <br>
+-User profiles: Home location so issues could be sorted nearest first. <br>
+-User profiles: Add user types for more specific UX (runner, hiker, hunter, volunteer...). <br>
+-Photos: Upload actual files (i.e. not just the URL).<br>
+-Photos: Ability to upload and display multiple files.  <br>
+-Consider getting feature feedback from Ouray Trail Group or nearby public land managers.<br>
+-Add points of interest.<br>
+-Ability to log and report hours for trail work.  <br>
+-Latitude/Longitude:  Request the browser's location and auto-populate that information (who wants to manually enter latitude and longitude??). <br>
+-Integrated GPS tracker.  <br>
+-Push notifications (*ding* "Chris Marcinek just cleared the fallen trees you reported on Hayden Trail!")<br>
+-Information could be presented in a news feed.  ("Charles reported a mudslide at Ironton."  "Vale reported Richmond is now passable with microspikes.")<br>
 -Additional authentication methods.  
 
 ## Known Bugs
